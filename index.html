@@ -60,10 +60,10 @@
 
       const [lat, lon] = select.value.split(',');
       const cityName = select.options[select.selectedIndex].text;
-      output.textContent = `📡 Fetching weather for ${cityName}...`;
+      output.textContent = 📡 Fetching weather for ${cityName}...;
 
       try {
-        const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`);
+        const res = await fetch(https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true);
         const data = await res.json();
         const w = data.current_weather;
 
@@ -76,10 +76,10 @@
         });
 
         output.textContent =
-          `📍 City: ${cityName}\n` +
-          `🌡 Temperature: ${w.temperature}°C\n` +
-          `🌬 Wind Speed: ${w.windspeed} km/h\n` +
-          `⏰ Time: ${formattedTime}`;
+          📍 City: ${cityName}\n +
+          🌡 Temperature: ${w.temperature}°C\n +
+          🌬 Wind Speed: ${w.windspeed} km/h\n +
+          ⏰ Time: ${formattedTime};
       } catch (err) {
         console.error(err);
         output.textContent = "⚠ Error fetching weather data.";
@@ -88,4 +88,3 @@
   </script>
 </body>
 </html>
-
